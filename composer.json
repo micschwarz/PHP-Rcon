@@ -1,0 +1,22 @@
+{
+    "name": "micschwarz/rcon",
+    "description": "A small and easy to use rcon connector",
+    "type": "libary",
+    "authors": [
+        {
+            "name": "Michael Schwarz",
+            "email": "contact@micschwarz.dev"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rcon\\": "src/Rcon"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t example"
+    }
+}

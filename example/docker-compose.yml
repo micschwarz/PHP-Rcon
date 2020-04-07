@@ -1,0 +1,17 @@
+# Example Minecraft Server based on https://hub.docker.com/r/itzg/minecraft-server/
+
+version: '3'
+
+services:
+  minecraft_server:
+    image: itzg/minecraft-server
+    ports:
+      - "25565:25565"
+      - "28016:28016"
+    volumes:
+      - "./data:/data"
+    environment:
+      EULA: "TRUE"
+      ENABLE_RCON: "true"
+      RCON_PASSWORD: "testing"
+      RCON_PORT: 28016
