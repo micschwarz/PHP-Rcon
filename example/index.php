@@ -1,7 +1,7 @@
 <?php
 
 use Rcon\Exception\ConnectionException;
-use Rcon\Exception\ConnectionNotOpenException as ConnectionNotOpenExceptionAlias;
+use Rcon\Exception\ConnectionNotOpenException as ConnectionNotOpenException;
 use Rcon\Rcon;
 
 include '../vendor/autoload.php';
@@ -24,6 +24,6 @@ if ($authorized)
     try {
         $playerList = $rcon->execCommand('list');// List Player
         print_r($playerList);
-    } catch (ConnectionNotOpenExceptionAlias $e) {
+    } catch (ConnectionNotOpenException $e) {
         print('Exception: ' . $e->getMessage() . '<br/>');
     }

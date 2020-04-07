@@ -17,6 +17,6 @@
         }
     },
     "scripts": {
-        "start": "php -S localhost:8080 -t example"
+        "start-example": "composer dump-autoload -o && php -S localhost:8080 -t example"
     }
 }
